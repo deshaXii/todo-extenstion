@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="todo-form">
+    <h1 class="extenstion-title">To-Do List</h1>
+    <div class="input-box"><label for="new-task">Task Title</label> <input type="text" id="new-task"
+        placeholder="New task...">
+    </div>
+    <div class="input-box steps-box">
+      <div class="input-box">
+        <label for="new-step">Add Steps</label>
+        <input type="text" id="new-step" placeholder="New step...">
+      </div>
+      <button id="add-step">+</button>
+    </div>
+    <div class="input-box"><label for="due-date">Due date</label>
+      <input type="datetime-local" id="due-date" placeholder="Due date">
+    </div>
+    <div class="input-box">
+      <label for="description">Description</label>
+      <textarea id="description" placeholder="Description..."></textarea>
+    </div>
+
+    <ul id="steps-list"></ul>
+
+
+
+    <label class="container include-url" for="include-url">Include current page URL
+      <input type="checkbox" id="include-url">
+      <span class="checkmark"></span>
+    </label>
+
+    <button id="add-task">Add Task</button>
+  </div>
+  <div id="accordion">
+    <div class="accordion-container">
+
+    </div>
+    <!-- To-Do items will be added here -->
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

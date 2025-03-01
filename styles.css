@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", serif;
+  background-color: #f0f8ff; /* Light blue background */
+  color: #333;
+}
+
+h1.extenstion-title {
+  font-size: 10px;
+  color: #2e8b57; /* Green color for the title */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  height: 40px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.3s linear;
+  box-sizing: border-box;
+  padding-top: 18px;
+  padding-bottom: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #2e8b57; /* Green color for buttons */
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0;
+}
+
+button:hover {
+  background-color: #3cb371; /* Darker green on hover */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff; /* White background for list items */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+li span {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+li button {
+  margin-left: 10px;
+  background-color: #ff6347; /* Red color for delete button */
+}
+
+li button:hover {
+  background-color: #ff4500; /* Darker red on hover */
+}
+
+textarea {
+  height: 60px;
+}
+.todo-form #steps-list li {
+  margin-left: 0;
+}
+
+.todo-form #steps-list li label.container {
+  margin: 0;
+  padding-left: 10px;
+  text-indent: 10px;
+  font-size: 16px;
+}
+
+.todo-form #steps-list li span.checkmark {
+  margin: 0;
+}
+
+.todo-form #steps-list li label.container:first-letter {
+  text-transform: capitalize;
+}
+#steps-list li {
+  margin-left: 20px;
+}
+.accordion-container {
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.accordion-section {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* White background for accordion sections */
+  width: 390px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.accordion-header {
+  background-color: #add8e6; /* Light blue color for accordion headers */
+  cursor: pointer;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+}
+
+.accordion-content.active {
+  display: block;
+}
+
+.todo-form {
+  padding: 10px;
+  width: 350px;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+h1.extenstion-title {
+  color: #2e8b57;
+  font-size: 20px;
+}
+
+.todo-form input {
+  width: 100%;
+  resize: none;
+  margin: 0;
+}
+
+.todo-form textarea {
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box label {
+  position: absolute;
+  top: -9px;
+  left: 10px;
+  background: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #add8e6;
+  font-size: 11px;
+  color: #494949;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2e8b57;
+  outline: 2px #2e8b57;
+}
+.input-box.steps-box {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 6px;
+}
+
+.input-box.steps-box .input-box {
+  width: 100%;
+  margin: 0;
+}
+
+.input-box.steps-box button#add-step {
+  margin: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  min-width: 40px;
+}
+
+.todo-form > .input-box:last-of-type {
+  margin-bottom: 0;
+}
+
+button#add-task {
+  width: 100%;
+  height: 36px;
+  padding: 0;
+  font-size: 15px;
+}
+
+body {
+  display: flex;
+  column-gap: 0;
+  flex-direction: row-reverse;
+  position: relative;
+  overflow: hidden;
+}
+
+.todo-form:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #b9b9b954;
+  left: -8px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #f3f3f3;
+  border-radius: 60px;
+  transition: all 0.3s linear;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+  margin-right: 0;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.accordion-header input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: unset;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+}
+div#accordion.hide {
+  display: none;
+}
+div#accordion {
+  height: 500px;
+  overflow: hidden;
+}
+.edit-steps span.step-title {
+  text-transform: capitalize;
+  margin: 5px;
+}
+
+.edit-steps label.container {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.edit-steps span.checkmark {
+  margin-left: 0px;
+  top: 1px;
+  left: 0;
+  width: 19px;
+  height: 19px;
+}
+
+.accordion-content > p:first-of-type {
+  background: #83d9a9;
+  padding: 5px 10px;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+.header-btns-box button {
+  padding: 4px;
+  margin: 0;
+  font-size: 0;
+}
+.header-btns-box button img {
+  width: 18px;
+}
+
+h4.task-title {
+  font-size: 14px;
+}
+
+.header-btns-box {
+  display: flex;
+  column-gap: 10px;
+}
+button.delete-button {
+  background: #cc5353;
+}
+.accordion-header .header-btns-box input {
+  margin: 0;
+  width: 26px;
+  height: 26px;
+}
+
+.accordion-header .header-btns-box label.container {
+  margin: 0;
+  padding-left: 25px;
+}
+
+.accordion-header .header-btns-box span.checkmark {
+  top: 0;
+  border-radius: 4px;
+}
+label.container.include-url {
+  background: #fff;
+  padding: 6px 20px;
+  border-radius: 4px;
+  background: #3f8df0a1;
+  font-size: 14px;
+  color: #ffffff;
+  text-indent: 11px;
+  margin-bottom: 15px;
+}
+
+label.container.include-url span.checkmark {
+  top: 4px;
+  left: 5px;
+  width: 21px;
+  height: 21px;
+}
+
+label.container.include-url input:checked ~ .checkmark:after {
+  left: 7px;
+  top: 3px;
+}
+.edit-steps span.checkmark:after {
+  top: 3px;
+  border-width: 0 2px 2px 0;
+  left: 7px;
+  width: 4px;
+  height: 9px;
+}
